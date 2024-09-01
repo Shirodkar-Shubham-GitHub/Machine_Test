@@ -16,6 +16,7 @@ class ClientListCreateView(generics.ListCreateAPIView):
 class ClientRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Client.objects.all()
     serializer_class = ClientSerializer
+    lookup_field = 'id'  # or 'slug', 'pk', etc.
     permission_classes = [IsAuthenticated]
 
 class ProjectCreateView(generics.CreateAPIView):
