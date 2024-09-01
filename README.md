@@ -16,6 +16,7 @@
 
 ## Configure MySQL Configuration:
     pip install mysqlclient
+#### Setup in settings.py
     DATABASES = {  
     'default': {  
         'ENGINE': 'django.db.backends.mysql',  
@@ -29,5 +30,5 @@
         }  
     }  
     }  
-
+#### Migrations
     python manage.py migrate
